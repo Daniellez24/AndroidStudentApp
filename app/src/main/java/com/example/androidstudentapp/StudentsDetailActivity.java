@@ -4,18 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class StudentsDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_students_detail);
 
-        findViewById(R.id.new_student_btn)
+
+        findViewById(R.id.edit_student_save_btn)
                 .setOnClickListener( view -> startActivity(
-                                new Intent(this, StudentsDetailActivity.class)
-                        ));
+                        new Intent(this, EditStudentActivity.class)
+                ));
+
     }
 }
