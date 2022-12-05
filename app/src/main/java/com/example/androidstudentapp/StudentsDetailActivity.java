@@ -17,7 +17,7 @@ public class StudentsDetailActivity extends AppCompatActivity {
 
         findViewById(R.id.edit_student_save_btn)
                 .setOnClickListener(view -> startActivity(
-                        new Intent(this, NewStudentsActivity.class)
+                        new Intent(this, EditStudentActivity.class)
                 ));
 
         TextView name = findViewById(R.id.student_details_id_tv);

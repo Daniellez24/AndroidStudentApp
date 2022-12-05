@@ -58,6 +58,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="250dp"
+        android:checked="false"
+        android:editable="false"
         android:text="Checked"
         app:layout_constraintBottom_toTopOf="@+id/edit_student_save_btn"
         app:layout_constraintStart_toStartOf="@+id/student_details_img"

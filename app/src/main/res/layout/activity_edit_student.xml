@@ -54,12 +54,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="Address:"
-        app:layout_constraintBottom_toTopOf="@+id/student_details_checkbox"
+        app:layout_constraintBottom_toTopOf="@+id/edit_student_checkbox"
         app:layout_constraintStart_toStartOf="@+id/student_details_img"
         app:layout_constraintTop_toBottomOf="@+id/student_details_address" />
 
     <CheckBox
-        android:id="@+id/student_details_checkbox"
+        android:id="@+id/edit_student_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="250dp"

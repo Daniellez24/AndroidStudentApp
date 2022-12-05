@@ -31,6 +31,7 @@ public class EditStudentActivity extends AppCompatActivity {
         deleteBtn = findViewById(R.id.edit_student_delete_btn);
 
         saveBtn.setOnClickListener(view -> saveStudent());
+        cancelBtn.setOnClickListener(view -> finish());
 
     }
 
