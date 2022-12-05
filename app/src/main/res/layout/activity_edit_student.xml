@@ -7,56 +7,56 @@
     tools:context=".EditStudentActivity">
 
     <ImageView
-        android:id="@+id/edit_student_img"
+        android:id="@+id/student_details_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/edit_student_name_tv"
+        app:layout_constraintBottom_toTopOf="@+id/student_details_name_tv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
-        android:id="@+id/edit_student_name_tv"
+        android:id="@+id/student_details_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="32dp"
         android:text="Name: "
-        app:layout_constraintBottom_toTopOf="@+id/edit_student_id_tv"
-        app:layout_constraintStart_toStartOf="@+id/edit_student_img"
-        app:layout_constraintTop_toBottomOf="@+id/edit_student_img" />
+        app:layout_constraintBottom_toTopOf="@+id/student_details_id_tv"
+        app:layout_constraintStart_toStartOf="@+id/student_details_img"
+        app:layout_constraintTop_toBottomOf="@+id/student_details_img" />
 
     <TextView
-        android:id="@+id/edit_student_id_tv"
+        android:id="@+id/student_details_id_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="Id: "
-        app:layout_constraintBottom_toTopOf="@+id/edit_student_phone_tv"
-        app:layout_constraintStart_toStartOf="@+id/edit_student_img"
-        app:layout_constraintTop_toBottomOf="@+id/edit_student_name_tv" />
+        app:layout_constraintBottom_toTopOf="@+id/student_details_address"
+        app:layout_constraintStart_toStartOf="@+id/student_details_img"
+        app:layout_constraintTop_toBottomOf="@+id/student_details_name_tv" />
 
     <TextView
-        android:id="@+id/edit_student_phone_tv"
+        android:id="@+id/student_details_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="Phone:"
-        app:layout_constraintBottom_toTopOf="@+id/edit_student_address_tv"
-        app:layout_constraintStart_toStartOf="@+id/edit_student_img"
-        app:layout_constraintTop_toBottomOf="@+id/edit_student_id_tv" />
+        app:layout_constraintBottom_toTopOf="@+id/student_details_phone_tv"
+        app:layout_constraintStart_toStartOf="@+id/student_details_img"
+        app:layout_constraintTop_toBottomOf="@+id/student_details_id_tv" />
 
     <TextView
-        android:id="@+id/edit_student_address_tv"
+        android:id="@+id/student_details_phone_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="Address:"
         app:layout_constraintBottom_toTopOf="@+id/student_details_checkbox"
-        app:layout_constraintStart_toStartOf="@+id/edit_student_img"
-        app:layout_constraintTop_toBottomOf="@+id/edit_student_phone_tv" />
+        app:layout_constraintStart_toStartOf="@+id/student_details_img"
+        app:layout_constraintTop_toBottomOf="@+id/student_details_address" />
 
     <CheckBox
         android:id="@+id/student_details_checkbox"
@@ -65,15 +65,15 @@
         android:layout_marginBottom="250dp"
         android:text="CheckBox"
         app:layout_constraintBottom_toTopOf="@+id/edit_student_save_btn"
-        app:layout_constraintStart_toStartOf="@+id/edit_student_img"
-        app:layout_constraintTop_toBottomOf="@+id/edit_student_address_tv" />
+        app:layout_constraintStart_toStartOf="@+id/student_details_img"
+        app:layout_constraintTop_toBottomOf="@+id/student_details_phone_tv" />
 
     <Button
         android:id="@+id/edit_student_save_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="Edit"
+        android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -93,7 +93,7 @@
         android:id="@+id/edit_student_cancel_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="@+id/edit_student_save_btn"
         app:layout_constraintEnd_toStartOf="@+id/edit_student_delete_btn"
         app:layout_constraintHorizontal_bias="0.5"
@@ -107,9 +107,9 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        app:layout_constraintBottom_toBottomOf="@+id/edit_student_name_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/student_details_name_tv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/edit_student_name_tv" />
+        app:layout_constraintTop_toTopOf="@+id/student_details_name_tv" />
 
     <EditText
         android:id="@+id/edit_student_address_et"
@@ -118,9 +118,9 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Address"
-        app:layout_constraintBottom_toBottomOf="@+id/edit_student_address_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/student_details_phone_tv"
         app:layout_constraintEnd_toEndOf="@+id/edit_student_name_et"
-        app:layout_constraintTop_toTopOf="@+id/edit_student_address_tv" />
+        app:layout_constraintTop_toTopOf="@+id/student_details_phone_tv" />
 
     <EditText
         android:id="@+id/edit_student_phone_et"
@@ -129,9 +129,9 @@
         android:ems="10"
         android:inputType="number"
         android:text="050111111"
-        app:layout_constraintBottom_toBottomOf="@+id/edit_student_phone_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/student_details_address"
         app:layout_constraintEnd_toEndOf="@+id/edit_student_name_et"
-        app:layout_constraintTop_toTopOf="@+id/edit_student_phone_tv" />
+        app:layout_constraintTop_toTopOf="@+id/student_details_address" />
 
     <EditText
         android:id="@+id/edit_student_id_et"
@@ -140,8 +140,8 @@
         android:ems="10"
         android:inputType="phone"
         android:text="id"
-        app:layout_constraintBottom_toBottomOf="@+id/edit_student_id_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/student_details_id_tv"
         app:layout_constraintEnd_toEndOf="@+id/edit_student_name_et"
-        app:layout_constraintTop_toTopOf="@+id/edit_student_id_tv" />
+        app:layout_constraintTop_toTopOf="@+id/student_details_id_tv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

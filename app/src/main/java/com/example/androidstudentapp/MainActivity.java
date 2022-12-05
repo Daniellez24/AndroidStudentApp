@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //TODO Wait for danielle and add recyclerView presenting the list data
+        //TODO check how to pass this data to other screens (they should be able to edit the original list)
         students.add(new StudentModel("Studet", "1", "Adress1", 0501111));
         students.add(new StudentModel("Studet1", "2", "Adress2", 052656));
         students.add(new StudentModel("Studet2", "3", "Adress3", 21254651));
