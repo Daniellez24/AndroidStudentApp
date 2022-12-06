@@ -21,6 +21,18 @@ public class Student {
         this.name = name;
     }
 
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setCb(Boolean cb) {
+        this.cb = cb;
+    }
+
     public String getId() {
         return id;
     }

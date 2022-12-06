@@ -35,17 +35,23 @@ public class EditStudentActivity extends AppCompatActivity {
         cancelBtn = findViewById(R.id.edit_student_cancel_btn);
         deleteBtn = findViewById(R.id.edit_student_delete_btn);
 
+        name.setText(MainActivity.students.get(pos).name);
+        id.setText(MainActivity.students.get(pos).id);
+        phone.setText(MainActivity.students.get(pos).phone);
+        address.setText(MainActivity.students.get(pos).address);
+        checkBox.setChecked(MainActivity.students.get(pos).cb);
+
         saveBtn.setOnClickListener(view -> saveStudent());
         cancelBtn.setOnClickListener(view -> finish());
 
     }
 
-
     void saveStudent() {
-        //TODO update the relevant student on the list of student with this new data
-        name.getText();
-        id.getText();
-        phone.getText();
-        address.getText();
+        MainActivity.students.get(pos).setName(name.getText().toString());
+        MainActivity.students.get(pos).setId(id.getText().toString());
+        MainActivity.students.get(pos).setPhone(phone.getText().toString());
+        MainActivity.students.get(pos).setAddress(address.getText().toString());
+        MainActivity.students.get(pos).setCb(checkBox.isChecked());
+        finish();
     }
 }
