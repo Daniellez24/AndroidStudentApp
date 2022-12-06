@@ -24,7 +24,7 @@ public class EditStudentActivity extends AppCompatActivity {
         phone = findViewById(R.id.edit_student_phone_et);
         address = findViewById(R.id.edit_student_address_et);
 
-        checkBox = findViewById(R.id.student_details_checkbox);
+        checkBox = findViewById(R.id.edit_student_checkbox);
 
         saveBtn = findViewById(R.id.edit_student_save_btn);
         cancelBtn = findViewById(R.id.edit_student_cancel_btn);
