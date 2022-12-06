@@ -7,7 +7,7 @@ public class Student {
     public Student(String name, String id, String address, String phone, Boolean cb) {
         this.name = name;
         this.id = id;
-        this.phone = address;
+        this.address = address;
         this.phone =  phone;
         this.cb = cb;
 
@@ -19,6 +19,18 @@ public class Student {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setCb(Boolean cb) {
+        this.cb = cb;
     }
 
     public String getId() {

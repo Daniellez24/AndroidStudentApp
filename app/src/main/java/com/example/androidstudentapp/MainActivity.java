@@ -16,16 +16,24 @@ import android.widget.TextView;
 import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
-    LinkedList<Student> students = new LinkedList<>();
+    static LinkedList<Student> students = new LinkedList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        findViewById(R.id.new_student_btn)
+                .setOnClickListener(view -> startActivity(
+                        new Intent(this, AddStudentActivity.class)
+                ));
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
         RecyclerView list = findViewById(R.id.activity_student_recycler_list);
         list.hasFixedSize();
-
         list.setLayoutManager(new LinearLayoutManager(this));
         StudentRecyclerAdapter adapter = new StudentRecyclerAdapter();
         list.setAdapter(adapter);
@@ -34,21 +42,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(int pos) {
                 Log.d("TAG", "Row was clicked " + pos);
+                Intent intent = new Intent(MainActivity.this, StudentsDetailActivity.class);
+                intent.putExtra("position", pos);
+                MainActivity.this.startActivity(intent);
             }
         });
-        //TODO Wait for danielle and add recyclerView presenting the list data
-        //TODO check how to pass this data to other screens (they should be able to edit the original list)
-        students.add(new Student("Student", "1", "Address", "1234", false ));
-        students.add(new Student("Student1", "2", "Address", "1234", false));
-        students.add(new Student("Student2", "3", "Address", "1234", false));
-        students.add(new Student("Student3", "4", "Address", "1234", false));
-        students.add(new Student("Student4", "5", "Address", "1234", false));
-        students.add(new Student("Student5", "6", "Address", "1234", false));
 
-        findViewById(R.id.new_student_btn)
-                .setOnClickListener(view -> startActivity(
-                        new Intent(this, AddStudentActivity.class)
-                ));
     }
 
     class StudentViewHolder extends RecyclerView.ViewHolder{

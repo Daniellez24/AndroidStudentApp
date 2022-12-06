@@ -3,9 +3,14 @@ package com.example.androidstudentapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+import java.sql.SQLOutput;
 
 public class AddStudentActivity extends AppCompatActivity {
     TextView name,id,phone,address;
@@ -28,5 +33,14 @@ public class AddStudentActivity extends AppCompatActivity {
 
         cancel.setOnClickListener(view -> finish());
 
+        save.setOnClickListener(view -> {
+            Student st = new Student(name.getText().toString(), id.getText().toString(), address.getText().toString(), phone.getText().toString(),checkBox.isChecked());
+            MainActivity.students.add(st);
+            finish();
+        });
+
     }
+
+
+
 }

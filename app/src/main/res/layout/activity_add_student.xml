@@ -89,7 +89,6 @@
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toBottomOf="@+id/add_student_name_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/add_student_name_tv" />
@@ -100,7 +99,6 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toBottomOf="@+id/add_student_id_tv"
         app:layout_constraintEnd_toEndOf="@+id/add_student_name_ed"
         app:layout_constraintTop_toTopOf="@+id/add_student_id_tv" />
@@ -121,7 +119,6 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toBottomOf="@+id/add_student_address_tv"
         app:layout_constraintEnd_toEndOf="@+id/add_student_name_ed"
         app:layout_constraintTop_toTopOf="@+id/add_student_address_tv" />
