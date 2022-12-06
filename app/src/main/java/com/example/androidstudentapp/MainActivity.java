@@ -23,13 +23,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        students.add(new Student("Student", "1", "Address", "1234", false ));
-//        students.add(new Student("Student1", "2", "Address", "1234", false));
-//        students.add(new Student("Student2", "3", "Address", "1234", false));
-//        students.add(new Student("Student3", "4", "Address", "1234", false));
-//        students.add(new Student("Student4", "5", "Address", "1234", false));
-//        students.add(new Student("Student5", "6", "Address", "1234", false));
-
         findViewById(R.id.new_student_btn)
                 .setOnClickListener(view -> startActivity(
                         new Intent(this, AddStudentActivity.class)
@@ -49,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(int pos) {
                 Log.d("TAG", "Row was clicked " + pos);
+                Intent intent = new Intent(MainActivity.this, StudentsDetailActivity.class);
+                intent.putExtra("position", pos);
+                MainActivity.this.startActivity(intent);
             }
         });
 

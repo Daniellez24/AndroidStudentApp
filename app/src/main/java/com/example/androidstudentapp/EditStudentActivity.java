@@ -2,22 +2,27 @@ package com.example.androidstudentapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class EditStudentActivity extends AppCompatActivity {
     EditText name, id, phone, address;
     CheckBox checkBox;
     Button saveBtn, deleteBtn, cancelBtn;
+    int pos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_student);
+
+        Intent intent = getIntent();
+        pos = (intent.getIntExtra("studentRow", -1));
+        Log.d("edit position", pos + "");
 
         name = findViewById(R.id.edit_student_name_et);
         id = findViewById(R.id.edit_student_id_et);
@@ -26,7 +31,7 @@ public class EditStudentActivity extends AppCompatActivity {
 
         checkBox = findViewById(R.id.edit_student_checkbox);
 
-        saveBtn = findViewById(R.id.edit_student_save_btn);
+        saveBtn = findViewById(R.id.edit_student_edit_btn);
         cancelBtn = findViewById(R.id.edit_student_cancel_btn);
         deleteBtn = findViewById(R.id.edit_student_delete_btn);
 

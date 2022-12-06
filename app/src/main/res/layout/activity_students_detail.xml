@@ -31,27 +31,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Id: "
-        app:layout_constraintBottom_toTopOf="@+id/student_details_address"
-        app:layout_constraintStart_toStartOf="@+id/student_details_img"
-        app:layout_constraintTop_toBottomOf="@+id/student_details_name_tv" />
-
-    <TextView
-        android:id="@+id/student_details_address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Phone:"
         app:layout_constraintBottom_toTopOf="@+id/student_details_phone_tv"
         app:layout_constraintStart_toStartOf="@+id/student_details_img"
-        app:layout_constraintTop_toBottomOf="@+id/student_details_id_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/student_details_name_tv" />
 
     <TextView
         android:id="@+id/student_details_phone_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Phone:"
+        app:layout_constraintBottom_toTopOf="@+id/student_details_address_tv"
+        app:layout_constraintStart_toStartOf="@+id/student_details_img"
+        app:layout_constraintTop_toBottomOf="@+id/student_details_id_tv" />
+
+    <TextView
+        android:id="@+id/student_details_address_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Address:"
         app:layout_constraintBottom_toTopOf="@+id/student_details_checkbox"
         app:layout_constraintStart_toStartOf="@+id/student_details_img"
-        app:layout_constraintTop_toBottomOf="@+id/student_details_address" />
+        app:layout_constraintTop_toBottomOf="@+id/student_details_phone_tv" />
 
     <CheckBox
         android:id="@+id/student_details_checkbox"
@@ -61,12 +61,12 @@
         android:checked="false"
         android:editable="false"
         android:text="Checked"
-        app:layout_constraintBottom_toTopOf="@+id/edit_student_save_btn"
+        app:layout_constraintBottom_toTopOf="@+id/edit_student_edit_btn"
         app:layout_constraintStart_toStartOf="@+id/student_details_img"
-        app:layout_constraintTop_toBottomOf="@+id/student_details_phone_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/student_details_address_tv" />
 
     <Button
-        android:id="@+id/edit_student_save_btn"
+        android:id="@+id/edit_student_edit_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
