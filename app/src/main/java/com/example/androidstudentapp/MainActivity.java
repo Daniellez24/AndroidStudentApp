@@ -23,19 +23,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
-
-
-        //TODO Wait for danielle and add recyclerView presenting the list data
-        //TODO check how to pass this data to other screens (they should be able to edit the original list)
-        students.add(new Student("Student", "1", "Address", "1234", false ));
-        students.add(new Student("Student1", "2", "Address", "1234", false));
-        students.add(new Student("Student2", "3", "Address", "1234", false));
-        students.add(new Student("Student3", "4", "Address", "1234", false));
-        students.add(new Student("Student4", "5", "Address", "1234", false));
-        students.add(new Student("Student5", "6", "Address", "1234", false));
+//        students.add(new Student("Student", "1", "Address", "1234", false ));
+//        students.add(new Student("Student1", "2", "Address", "1234", false));
+//        students.add(new Student("Student2", "3", "Address", "1234", false));
+//        students.add(new Student("Student3", "4", "Address", "1234", false));
+//        students.add(new Student("Student4", "5", "Address", "1234", false));
+//        students.add(new Student("Student5", "6", "Address", "1234", false));
 
         findViewById(R.id.new_student_btn)
                 .setOnClickListener(view -> startActivity(

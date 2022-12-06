@@ -36,7 +36,6 @@ public class AddStudentActivity extends AppCompatActivity {
         save.setOnClickListener(view -> {
             Student st = new Student(name.getText().toString(), id.getText().toString(), address.getText().toString(), phone.getText().toString(),checkBox.isChecked());
             MainActivity.students.add(st);
-            Log.d("addNewStudent",MainActivity.students.size() + "");
             finish();
         });
 
