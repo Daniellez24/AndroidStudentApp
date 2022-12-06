@@ -42,6 +42,7 @@ public class EditStudentActivity extends AppCompatActivity {
         checkBox.setChecked(MainActivity.students.get(pos).cb);
 
         saveBtn.setOnClickListener(view -> saveStudent());
+        deleteBtn.setOnClickListener(view -> deleteStudent());
         cancelBtn.setOnClickListener(view -> finish());
 
     }
@@ -53,5 +54,11 @@ public class EditStudentActivity extends AppCompatActivity {
         MainActivity.students.get(pos).setAddress(address.getText().toString());
         MainActivity.students.get(pos).setCb(checkBox.isChecked());
         finish();
+    }
+
+    void deleteStudent(){
+        MainActivity.students.remove(pos);
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
